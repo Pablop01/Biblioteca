@@ -7,21 +7,17 @@ public class Persona {
 	private String nombre;
 	private String apellidos;
 	private String dni;
-	private int cantidadLibros;
-	private ArrayList<Libro> librosActuales;
+	private static int cantidadLibros;
+	private ArrayList<Ejemplar> librosActuales;
 	
 	public Persona(String nombre, String apellidos, String dni) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.dni = dni;
-		this.cantidadLibros = 0;
-		librosActuales = new ArrayList<Libro>();
+		this.cantidadLibros = 3;
+		librosActuales = new ArrayList<Ejemplar>();
 
 	}
-
-	public void setCantidadLibros(int cantidadLibros) {
-		this.cantidadLibros = cantidadLibros;
-	}		
 	
 }
