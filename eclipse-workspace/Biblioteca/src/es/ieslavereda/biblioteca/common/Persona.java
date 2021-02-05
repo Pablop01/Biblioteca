@@ -17,6 +17,7 @@ public class Persona {
 		this.dni = dni;
 		this.cantidadLibros = 0;
 		librosActuales = new ArrayList<Libro>();
+
 	}
 
 	public void setCantidadLibros(int cantidadLibros) {
