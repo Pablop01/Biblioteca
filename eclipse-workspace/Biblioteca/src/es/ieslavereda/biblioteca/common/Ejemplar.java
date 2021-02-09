@@ -1,21 +1,55 @@
 package es.ieslavereda.biblioteca.common;
 
-import java.util.ArrayList;
+public class Ejemplar {
 
-public class Ejemplar extends Libro{
+	private Persona aQuien;
+	private int codigo;
+	private Libro l;
 
-	private boolean prestado = false;
-	private ArrayList<Persona> aQuien = null;
-	private static int cantidad = 0;
-	
-	public Ejemplar(String titulo, String autor, int isbn) {
-		super(titulo, autor, isbn);
-		this.prestado = prestado;
-		this.aQuien = aQuien;
-		this.cantidad = cantidad;
-		
+	public Ejemplar(Libro l, int codigo) {
+		this.l = l;
+		this.codigo = codigo;
+	}
+
+	public void prestarEjemplar(Libro l, Persona p) {
+
+		if (p.esSocio()) {
+			if (p.getCantidadLibros() < 3) {
+
+				l.setDisponibles(l.getDisponibles() - 1);
+				this.aQuien = p;
+				p.setCantidadLibros(1);
+				p.getLibrosActuales().add(this);
+
+			} else {
+				System.out.println("No puedes sacar mas de 3 libros");
+			}
+		} else {
+			System.out.println("No eres socio");
+		}
+
+	}
+
+	public Persona getaQuien() {
+		return aQuien;
 	}
 	
+	public Libro getLibro() {
+		return l;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
 	
-	
+	@Override
+	public String toString() {
+		
+		if(aQuien!=null) {
+			return l.getTitulo() + " " + codigo + " Lo tiene " + aQuien;
+		}else {
+			return l.getTitulo() + " " + codigo + " esta disponible";
+		}	
+	}
+
 }
