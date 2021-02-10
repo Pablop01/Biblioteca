@@ -27,7 +27,29 @@ public class Ejemplar {
 		} else {
 			System.out.println("No eres socio");
 		}
-
+	}
+	
+	public void devolverEjemplar(Libro l, Persona p) {
+		
+		if(p.esSocio()) {
+			if(p.getCantidadLibros()>0) {
+				if(p==getaQuien()) {
+					
+					l.setDisponibles(l.getDisponibles() + 1);
+					this.aQuien = null;
+					p.setCantidadLibros(-1);
+					//Falta eliminar el ejemplar de la coleccion getLibrosActuales
+					
+				}else {
+					System.out.println("No tienes un ejemplar de este libro prestado");
+				}
+			}else {
+				System.out.println("No tienes libros prestados");
+			}	
+		}else {
+			System.out.println("No eres socio");
+		}
+		
 	}
 
 	public Persona getaQuien() {
