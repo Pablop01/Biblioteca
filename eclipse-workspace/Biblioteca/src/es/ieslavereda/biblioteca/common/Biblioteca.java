@@ -20,4 +20,14 @@ public class Biblioteca {
 		listaLibros.add(l);
 	}
 	
+	public Libro buscarIsbn(int isbn){
+		for(Libro l : listaLibros) {
+			if(l.getIsbn()==isbn) {
+				return l;
+			}
+		}
+		return null;
+	}
+	
+	
 }
