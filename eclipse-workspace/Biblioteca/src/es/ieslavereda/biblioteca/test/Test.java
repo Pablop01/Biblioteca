@@ -26,19 +26,23 @@ public class Test {
 		l.prestarEjemplar(p);
 		l2.prestarEjemplar(p);
 		l3.prestarEjemplar(p);
-		l4.prestarEjemplar(p);
+//		l4.prestarEjemplar(p);
 		
 		l.prestarEjemplar(p2);
 		l.prestarEjemplar(p3);
 		
+		System.out.println(l);
+		
+		l.devolverEjemplar(p);
+		l.devolverEjemplar(p3);
 		System.out.println(l);
 //		System.out.println(l2);
 //		System.out.println(l3);
 //		System.out.println(l4);
 		System.out.println();
 		System.out.println(p.imprimirLibros());
-		System.out.println(p2.imprimirLibros());
-		System.out.println(p3.imprimirLibros());
+//		System.out.println(p2.imprimirLibros());
+//		System.out.println(p3.imprimirLibros());
 		
 	}
 

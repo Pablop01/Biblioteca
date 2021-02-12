@@ -38,7 +38,7 @@ public class Ejemplar {
 					l.setDisponibles(l.getDisponibles() + 1);
 					this.aQuien = null;
 					p.setCantidadLibros(-1);
-					//Falta eliminar el ejemplar de la coleccion getLibrosActuales
+					p.getLibrosActuales().remove(this);
 					
 				}else {
 					System.out.println("No tienes un ejemplar de este libro prestado");
