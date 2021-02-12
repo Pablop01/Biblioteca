@@ -7,8 +7,7 @@ public class Persona {
 	private String nombre;
 	private String apellidos;
 	private String dni;
-	private boolean socio = false;
-	private int cantidadLibros;
+
 	private ArrayList<Ejemplar> librosActuales;
 	
 	public Persona(String nombre, String apellidos, String dni) {
@@ -16,21 +15,12 @@ public class Persona {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.dni = dni;
-		this.cantidadLibros = 0;
 		this.librosActuales = new ArrayList<Ejemplar>();
 
 	}
-	
-	public void serSocio() {
-		this.socio = true;
-	}
-	
-	public boolean esSocio() {
-		return socio;
-	}
 
 	public int getCantidadLibros() {
-		return cantidadLibros;
+		return librosActuales.size();
 	}
 	
 	public void setLibrosActuales(ArrayList<Ejemplar> librosActuales) {
@@ -58,10 +48,6 @@ public class Persona {
 
 	public String getApellidos() {
 		return apellidos;
-	}
-	
-	public void setCantidadLibros(int n) {
-		this.cantidadLibros += n;
 	}
 	
 	@Override

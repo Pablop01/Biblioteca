@@ -5,6 +5,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		Biblioteca b = new Biblioteca();
+		
 		Libro l = new Libro("El quijote","Yo",12564346);
 		Libro l2 = new Libro("Harry Potter","Yo",12564346);
 		Libro l3 = new Libro("Tirant lo blanc","Yo",12564346);
@@ -18,10 +20,6 @@ public class Test {
 		l2.addEjemplar(6);
 		l3.addEjemplar(6);
 		l4.addEjemplar(6);
-		
-		p.serSocio();
-		p2.serSocio();
-		p3.serSocio();
 		
 		l.prestarEjemplar(p);
 		l2.prestarEjemplar(p);
