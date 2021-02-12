@@ -1,5 +1,7 @@
 package es.ieslavereda.biblioteca.common;
 
+import java.util.Scanner;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -20,11 +22,12 @@ public class App {
 		b.addLibro(l);
 	}
 	
-	public static void prestarEjemplar(Libro l, Persona p) {
-		l.prestarEjemplar(p);
+	public static void prestarEjemplar() {
+	
+		
 	}
 
-	public static void devolverEjemplar(Libro l, Persona p) {
-		l.devolverEjemplar(p);
+	public static void devolverEjemplar() {
+
 	}
 }
