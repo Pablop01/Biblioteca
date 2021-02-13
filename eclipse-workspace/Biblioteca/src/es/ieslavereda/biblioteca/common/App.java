@@ -11,8 +11,10 @@ public class App {
 		Biblioteca b = new Biblioteca();
 
 		do {
-			showMenu();
-			seleccionarOpcion(b);
+			try {
+				showMenu();
+				seleccionarOpcion(b);
+			}catch(Exception e) {}
 		} while (true);
 	}
 
