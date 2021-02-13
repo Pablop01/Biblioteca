@@ -1,8 +1,9 @@
 package es.ieslavereda.biblioteca.common;
 
 import java.util.*;
+import java.io.Serializable;
 
-public class Libro {
+public class Libro implements Serializable{
 
 	private String titulo;
 	private String autor;

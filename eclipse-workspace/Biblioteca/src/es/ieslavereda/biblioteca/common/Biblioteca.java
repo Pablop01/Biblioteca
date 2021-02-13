@@ -46,5 +46,21 @@ public class Biblioteca {
 	public ArrayList<Libro> getListaLibros() {
 		return listaLibros;
 	}
+
+	public void setListaSocios(ArrayList<Persona> listaSocios) {
+		this.listaSocios = listaSocios;
+	}
+
+	public void setListaLibros(ArrayList<Libro> listaLibros) {
+		this.listaLibros = listaLibros;
+	}
+	
+	public void vaciarListaLibros() {
+		this.listaLibros.clear();
+	}
+	
+	public void vaciarListaSocios() {
+		this.listaSocios.clear();
+	}
 	
 }
