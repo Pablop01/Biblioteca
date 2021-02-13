@@ -47,6 +47,4 @@ public class Biblioteca {
 		return listaLibros;
 	}
 	
-	
-	
 }
