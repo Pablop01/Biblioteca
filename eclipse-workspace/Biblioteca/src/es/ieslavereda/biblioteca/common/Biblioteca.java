@@ -29,5 +29,23 @@ public class Biblioteca {
 		return null;
 	}
 	
+	public Persona buscarDNI(String dni) {
+		for(Persona p : listaSocios) {
+			if(p.getDni()==dni) {
+				return p;
+			}
+		}
+		return null;
+	}
+
+	public ArrayList<Persona> getListaSocios() {
+		return listaSocios;
+	}
+
+	public ArrayList<Libro> getListaLibros() {
+		return listaLibros;
+	}
+	
+	
 	
 }

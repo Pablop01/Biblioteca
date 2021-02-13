@@ -92,6 +92,10 @@ public class Libro {
 	public void setDisponibles(int disponibles) {
 		this.disponibles = disponibles;
 	}
+	
+	public int getCantidadEjemplares() {
+		return this.ejemplares.size();
+	}
 
 	@Override
 	public String toString() {
