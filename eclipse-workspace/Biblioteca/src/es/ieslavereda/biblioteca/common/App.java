@@ -92,7 +92,7 @@ public class App implements Serializable {
 				System.out.println("Elige como deseas ordenarlos");
 				System.out.println("1. Por titulo");
 				System.out.println("2. Por autor");
-				System.out.println("2. Por cantidad de ejemplares");
+				System.out.println("3. Por cantidad de ejemplares");
 				System.out.println();
 				mostrarLibros(b);
 				break;
