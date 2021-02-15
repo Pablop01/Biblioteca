@@ -32,7 +32,7 @@ public class Biblioteca {
 	
 	public Persona buscarDNI(String dni) {
 		for(Persona p : listaSocios) {
-			if(p.getDni()==dni) {
+			if(p.getDni().equals(dni)) {
 				return p;
 			}
 		}

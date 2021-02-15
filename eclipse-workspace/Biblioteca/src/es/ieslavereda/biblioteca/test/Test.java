@@ -217,9 +217,9 @@ public class Test implements Serializable{
 
 			String dni = sc.nextLine();
 			Persona p = b.buscarDNI(dni);
-			System.out.println(p.getLibrosActuales());
+			System.out.println(p.imprimirLibros());
 		} catch (Exception e) {
-			System.out.println("No hay nigun socio con ese DNI");
+			System.out.println(e);
 		}
 	}
 
@@ -360,9 +360,7 @@ public class Test implements Serializable{
 				System.out.println("Introduce una opcion valida");
 				borrarDatos(b);
 		
-		}
-		
-
+		}		
 		
 	}
 
